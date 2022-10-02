@@ -29,11 +29,11 @@ function getModa(...numbers) {
             showNumber = key;
         }
     }
-    console.log(`Число ${showNumber} : Повторюється ${maxCount} рази`);
+    return `Число ${showNumber} : Повторюється ${maxCount} рази`;
 }
 
+console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
-getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2);
 
 
 
@@ -46,12 +46,12 @@ function getAverage(...numbers) {
             let sum = numbers.reduce((a, b) => a + b, 0);
             result = sum / numbers.length
         }
-    console.log(result);
+    return result;
     }
     
 
+console.log(getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 
-getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2);
 
 
 //Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції
