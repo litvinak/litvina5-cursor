@@ -14,7 +14,7 @@ function getModa(...numbers) {
     let obj = {};
     let maxCount = null;
     let showNumber = null;
-    numbers.map(function(item, i, numbers){
+    numbers.forEach(function(item, i){
         if(obj[item]) {
             obj[item] = obj[item] + 1;
         } else {
@@ -76,13 +76,8 @@ console.log(filterEvenNumbers(1, 2, 3, 4, 5, 6));
 //Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0
 
 function countPositiveNumbers(...numbers) {
-    let numberZero = null;
-    numbers.map(function(item, i, numbers){
-        if(item > 0) {
-            numberZero += 1;
-        }
-        console.log(numberZero);
-    })
+    const result = numbers.filter(item => item > 0)
+    return result;
 }
 
-countPositiveNumbers(-1, -2, 4, 7, -1)
+console.log(countPositiveNumbers(-1, -2, 4, 7, -1));
